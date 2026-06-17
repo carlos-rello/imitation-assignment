@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imitation Assignment - Carlos Rello</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project {
+            width: 320px;
+        }
+
+        .project img {
+            width: 320px;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .project p {
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* Project 1 - Theater Stage with blur and text */
+        .stage-box {
+            position: relative;
+            width: 320px;
+            height: 240px;
+        }
+
+        .stage-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(4px);
+        }
+
+        .stage-box .stage-text {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px black;
+        }
+
+        /* Project 2 - Butterfly with two rounded corners */
+        .butterfly-img {
+            border-radius: 0px 60px 60px 0px;
+            filter: drop-shadow(3px 3px 8px rgba(0,0,0,0.4));
+        }
+
+        /* Project 3 - Seagull on gradient background */
+        /* the seagull picture has a black background built in, */
+        /* so mix-blend-mode screen is used to hide the black part */
+        .seagull-box {
+            width: 320px;
+            height: 240px;
+            background: linear-gradient(to bottom right, #6a7ee0, #e6e9fc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .seagull-box img {
+            width: 280px;
+            height: auto;
+            object-fit: contain;
+            mix-blend-mode: screen;
+        }
+
+        /* Project 4 - Dinosaur with drop shadow */
+        /* the dinosaur picture has a black background built into the file */
+        /* so the shadow is added around the whole square using box-shadow */
+        .dino-box {
+            width: 320px;
+            height: 240px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dino-box img {
+            width: 220px;
+            height: auto;
+            object-fit: contain;
+            box-shadow: 8px 8px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Project 5 - Football field with tic tac toe border */
+        /* border-image takes the small tic-tac-toe square and repeats it */
+        /* around the edge like a picture frame */
+        .field-box {
+            width: 260px;
+            height: 180px;
+            border-style: solid;
+            border-width: 40px;
+            border-image-source: url("images/tic-tac-toe.png");
+            border-image-slice: 33%;
+            border-image-repeat: round;
+        }
+
+        .field-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(110%);
+            display: block;
+        }
+
+        /* Project 6 - Penguins oval with sepia */
+        .penguin-img {
+            border-radius: 50%;
+            filter: sepia(85%) brightness(105%);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Imitation Assignment</h1>
+    <p>Carlos Rello - CSS3 Image Effects</p>
+
+    <div class="gallery">
+
+        <div class="project">
+            <div class="stage-box">
+                <img src="images/theater_stage.jpg" alt="Theater stage with red curtains">
+                <p class="stage-text">Presenting</p>
+            </div>
+            <p>Theater Stage</p>
+        </div>
+
+        <div class="project">
+            <img src="images/butterfly.jpg" alt="Blue and white butterfly on flowers" class="butterfly-img">
+            <p>Butterfly</p>
+        </div>
+
+        <div class="project">
+            <div class="seagull-box">
+                <img src="images/seagull.png" alt="Seagull flying">
+            </div>
+            <p>Seagull</p>
+        </div>
+
+        <div class="project">
+            <div class="dino-box">
+                <img src="images/dinosaur.png" alt="Cartoon green dinosaur">
+            </div>
+            <p>Dinosaur</p>
+        </div>
+
+        <div class="project">
+            <div class="field-box">
+                <img src="images/football_field.jpg" alt="Football field with yard lines">
+            </div>
+            <p>Football Field with Tic-Tac-Toe Border</p>
+        </div>
+
+        <div class="project">
+            <img src="images/penguins.jpg" alt="Penguin family on snow" class="penguin-img">
+            <p>Penguins</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
